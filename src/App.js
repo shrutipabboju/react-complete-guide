@@ -34,6 +34,23 @@ switchNameHandler = (newName) => {
 )
 }
 
+nameChangeHandler = (event) => {
+  this.setState({
+    persons: [
+    {
+      name:'Shruti',
+      age:23
+    },
+    {
+      name: event.target.value,
+      age:22
+    }
+  ]
+}
+)
+}
+
+
   render() {
     return (
       <div className="App">
@@ -46,7 +63,8 @@ switchNameHandler = (newName) => {
           click={this.switchNameHandler.bind(this,'Max!')} />
         <Person 
         name={this.state.persons[1].name}
-         age={this.state.persons[1].age}>Children props</Person>
+         age={this.state.persons[1].age}
+         changed={this.nameChangeHandler}>Children props</Person>
       </div>
     );
     // return React.createElement(,,,,);
