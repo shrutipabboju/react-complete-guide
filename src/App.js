@@ -16,13 +16,13 @@ state = {
   ]
 }
 
-switchNameHandler = () => {
+switchNameHandler = (newName) => {
   //console.log('was clicked')
   // Do not do this this.state.persons[0].name = 'Shruti Pabboju'
   this.setState({
     persons: [
     {
-      name:'Shruti Pabboju',
+      name:newName,
       age:23
     },
     {
@@ -39,11 +39,11 @@ switchNameHandler = () => {
       <div className="App">
         <h1>First Change</h1>
         <p>This is really working!</p>
-        <button onClick={this.switchNameHandler}>Switch Name</button>
+        <button onClick={this.switchNameHandler.bind(this,'Maximilian')}>Switch Name</button>
         <Person
          name={this.state.persons[0].name}
           age={this.state.persons[0].age}
-          click={this.switchNameHandler} />
+          click={this.switchNameHandler.bind(this,'Max!')} />
         <Person 
         name={this.state.persons[1].name}
          age={this.state.persons[1].age}>Children props</Person>
