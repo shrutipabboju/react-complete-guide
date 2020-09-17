@@ -6,10 +6,12 @@ class App extends Component {
 state = {
   persons: [
     {
+      id:1,
       name:'Shruti',
       age:23
     },
     {
+      id:2,
       name: 'Sample',
       age:29
     }
@@ -64,7 +66,8 @@ togglePersonsHandler = () => {
           return <Person
           click={() => this.deletePersonHandler(index)}
           name={person.name}
-          age={person.age} />
+          age={person.age}
+          key={person.id} />
         })}
          </div>
       )
