@@ -54,7 +54,8 @@ togglePersonsHandler = () => {
 
   render() {
     const style = {
-      backgroundcolor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
       border: '1x solid blue',
       padding: '8px',
@@ -76,6 +77,8 @@ togglePersonsHandler = () => {
         })}
          </div>
       )
+
+      style.backgroundColor = 'red';
     }
 
     return (
@@ -84,7 +87,7 @@ togglePersonsHandler = () => {
         <p>This is really working!</p>
         <button 
         style ={style}
-        onClick={this.togglePersonsHandler}>Switch Name</button>
+        onClick={this.togglePersonsHandler}>Toggle Name</button>
         {persons}
       </div>
     );
