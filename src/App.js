@@ -7,13 +7,18 @@ state = {
   persons: [
     {
       id:1,
-      name:'Shruti',
+      name:'Sample1',
       age:23
     },
     {
       id:2,
-      name: 'Sample',
-      age:29
+      name: 'Sample2',
+      age:24
+    },
+    {
+      id:3,
+      name: 'Sample3',
+      age:25
     }
   ],
   showPersons: false
@@ -81,10 +86,12 @@ togglePersonsHandler = () => {
       style.backgroundColor = 'red';
     }
 
+    let classes = ['red','bold'].join(' ');
+
     return (
       <div className="App">
-        <h1>First Change</h1>
-        <p>This is really working!</p>
+        <h1>React App</h1>
+        <p className={classes}>This is really working!</p>
         <button 
         style ={style}
         onClick={this.togglePersonsHandler}>Toggle Name</button>

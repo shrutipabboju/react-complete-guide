@@ -2,3 +2,11 @@
   text-align: center;
   font-style: italic;
 }
+
+.red {
+  color: red;
+}
+
+.bold{
+  font-weight: bold;
+}
